@@ -10,7 +10,7 @@ class Product(Base):
     id = Column(Integer,primary_key=True,index=True)
     name = Column (String,nullable=False,index=True)
     description = Column(Text)
-    prise = Column(Float, nullable=False)
+    price = Column(Float, nullable=False)
     category_id = Column(Integer,ForeignKey("categories.id"),nullable=False)
     image_url = Column(String)
     created_at =Column(DateTime,default=datetime.utcnow)
